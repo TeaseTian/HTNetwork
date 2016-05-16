@@ -17,7 +17,7 @@
 #endif
 
 /*!
- *  @author 黄仪标, 16-01-08 14:01:26
+ *
  *
  *  下载进度
  *
@@ -32,7 +32,7 @@ typedef HTDownloadProgress HTGetProgress;
 typedef HTDownloadProgress HTPostProgress;
 
 /*!
- *  @author 黄仪标, 16-01-08 14:01:26
+ *
  *
  *  上传进度
  *
@@ -71,7 +71,7 @@ typedef void(^HTResponseSuccess)(id response);
 typedef void(^HTResponseFail)(NSError *error);
 
 /*!
- *  @author huangyibiao, 15-11-15 13:11:31
+ *
  *
  *  基于AFNetworking的网络层封装类.
  *
@@ -80,7 +80,7 @@ typedef void(^HTResponseFail)(NSError *error);
 @interface HTNetwork : NSObject
 
 /*!
- *  @author 黄仪标, 15-11-15 13:11:45
+ *
  *
  *  用于指定网络请求接口的基础url，如：
  *  http://henishuo.com或者http://101.200.209.244
@@ -109,7 +109,7 @@ typedef void(^HTResponseFail)(NSError *error);
 + (void)obtainDataFromLocalWhenNetworkUnconnected:(BOOL)shouldObtain;
 
 /**
- *  @author 黄仪标
+ *
  *
  *  默认只缓存GET请求的数据，对于POST请求是不缓存的。如果要缓存POST获取的数据，需要手动调用设置
  *  对JSON类型数据有效，对于PLIST、XML不确定！
@@ -120,7 +120,7 @@ typedef void(^HTResponseFail)(NSError *error);
 + (void)cacheGetRequest:(BOOL)isCacheGet shoulCachePost:(BOOL)shouldCachePost;
 
 /**
- *  @author 黄仪标
+ *
  *
  *  获取缓存总大小/bytes
  *
@@ -129,14 +129,14 @@ typedef void(^HTResponseFail)(NSError *error);
 + (unsigned long long)totalCacheSize;
 
 /**
- *  @author 黄仪标
+ *
  *
  *  清除缓存
  */
 + (void)clearCaches;
 
 /*!
- *  @author 黄仪标, 15-11-15 14:11:40
+ *
  *
  *  开启或关闭接口打印信息
  *
@@ -145,7 +145,7 @@ typedef void(^HTResponseFail)(NSError *error);
 + (void)enableInterfaceDebug:(BOOL)isDebug;
 
 /*!
- *  @author 黄仪标, 15-12-25 15:12:45
+ *
  *
  *  配置请求格式，默认为JSON。如果要求传XML或者PLIST，请在全局配置一下
  *
@@ -160,7 +160,7 @@ typedef void(^HTResponseFail)(NSError *error);
   callbackOnCancelRequest:(BOOL)shouldCallbackOnCancelRequest;
 
 /*!
- *  @author 黄仪标, 15-11-16 13:11:41
+ *
  *
  *  配置公共的请求头，只调用一次即可，通常放在应用启动的时候配置就可以了
  *
@@ -169,13 +169,13 @@ typedef void(^HTResponseFail)(NSError *error);
 + (void)configCommonHttpHeaders:(NSDictionary *)httpHeaders;
 
 /**
- *  @author 黄仪标
+ *
  *
  *  取消所有请求
  */
 + (void)cancelAllRequest;
 /**
- *  @author 黄仪标
+ *
  *
  *  取消某个请求。如果是要取消某个请求，最好是引用接口所返回来的HTURLSessionTask对象，
  *  然后调用对象的cancel方法。如果不想引用对象，这里额外提供了一种方法来实现取消某个请求
@@ -185,7 +185,7 @@ typedef void(^HTResponseFail)(NSError *error);
 + (void)cancelRequestWithURL:(NSString *)url;
 
 /*!
- *  @author 黄仪标, 15-11-15 13:11:50
+ *
  *
  *  GET请求接口，若不指定baseurl，可传完整的url
  *
@@ -216,7 +216,7 @@ typedef void(^HTResponseFail)(NSError *error);
                             fail:(HTResponseFail)fail;
 
 /*!
- *  @author 黄仪标, 15-11-15 13:11:50
+ *
  *
  *  POST请求接口，若不指定baseurl，可传完整的url
  *
@@ -239,7 +239,7 @@ typedef void(^HTResponseFail)(NSError *error);
                           success:(HTResponseSuccess)success
                              fail:(HTResponseFail)fail;
 /**
- *  @author 黄仪标, 16-01-31 00:01:40
+ *
  *
  *  图片上传接口，若不指定baseurl，可传完整的url
  *
@@ -266,7 +266,7 @@ typedef void(^HTResponseFail)(NSError *error);
                                  fail:(HTResponseFail)fail;
 
 /**
- *  @author 黄仪标, 16-01-31 00:01:59
+ *
  *
  *  上传文件操作
  *
@@ -286,7 +286,7 @@ typedef void(^HTResponseFail)(NSError *error);
 
 
 /*!
- *  @author 黄仪标, 16-01-08 15:01:11
+ *  
  *
  *  下载文件
  *
